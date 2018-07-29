@@ -45,13 +45,13 @@ var div = d3.select("body").append("div")
 
   
   svg.append("text")
-    .attr("x", 360)   
+    .attr("x", 260)   
     .attr("y", 20 )
     .attr("dy", "3.5em" )
     .attr("text-anchor", "start")  
     .style("font-size", "28px")  
   	.style("font-weight", "bold")
-    .text("Population by Country ")
+    .text("Population by Country (Millions) ")
 
 var pack = d3.pack()
     .size([width-800, height])
@@ -104,7 +104,7 @@ d3.csv("trading_ds.csv", function(d) {
       .style("top", (d3.event.pageY - 28) + "px");	
   })
     .on("click", function(d) {
-        alert(" Population of country "+d.data.Country+" clicked " +d.data.Population+" is ");
+        alert(" Population of country "+d.data.Country+" is" +d.data.Population+" Million ");
     })			
     .on("mouseout", function(d) {		
     div.transition()		
@@ -211,17 +211,9 @@ d3.csv("trading_ds.csv", function(d) {
 			.attr("y", 40)
 			.attr("text-anchor", "middle")
 			.style("font", "20px sans-serif")
-			.text("GDP by country");
+			.text("GDP by country (Millions)");
 
-	// //append source data to svg
-	// let source = svg.append("g")
-	// 	.attr("class", "source");
-	// source.append("text")
-	// 	.attr("x", 1000)
-	// 	.attr("y", 500)
-	// 	.attr("text-anchor", "left")
-	// 	.style("font", "12px monospace")
-	// 	.text("Source: The World Bank");
+	
   
 
 
