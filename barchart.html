@@ -45,9 +45,6 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.csv("barchart.csv", function(d){
-  d.value = +d["Population"];
-  d.Country = d["Country"];
-  d.GDP = +d.GDP;
   return d;
 }, function(error, data) {
   if (error) throw error;
@@ -61,7 +58,7 @@ d3.csv("barchart.csv", function(d){
         });
     var newdata =[];    
     elements.forEach(elem => {
-        if(elem != "Country" && elem != "value"){
+        if(elem != "Country" && elem != "value" && elem != "GPD"){
             newdata.push(elem);
         }
     });
