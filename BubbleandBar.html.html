@@ -51,7 +51,7 @@ var div = d3.select("body").append("div")
     .attr("text-anchor", "start")  
     .style("font-size", "28px")  
   	.style("font-weight", "bold")
-    .text("Population by Country (In Millions) ")
+    .text("Population by Country (In Millions) ");
 
 var pack = d3.pack()
     .size([width-800, height])
@@ -168,14 +168,7 @@ d3.csv("trading_ds.csv", function(d) {
 
 	//sort data
 	data.sort(function(a,b) { return a.GDP - b.GDP; });
-     var duration = 300;
- 
-     
-    
-    div.html(d.data.Country + ": <br>"+d.data.value  )  
-      .style("left", (d3.event.pageX) + "px")   
-      .style("top", (d3.event.pageY - 28) + "px");  
-  })
+
 	//define domains based on data
 	x.domain([0, d3.max(data, function(d) { return d.GDP; })]);
 	y.domain(data.map(function(d) { return d.country; }));
