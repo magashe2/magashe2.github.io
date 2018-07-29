@@ -205,17 +205,17 @@ d3.csv("trading_ds.csv", function(d) {
 		.style("fill", "#2ca25f");
 	
 
-	//define chart title to svg
-	let title = svg.append("g")
-		.attr("class", "title");
-	title.append("text")
-		.attr("x", 1200)
-			.attr("y", 40)
-			.attr("text-anchor", "middle")
-			.style("font", "20px sans-serif")
-			.text("GDP by country (In Millions)");
-
 	
+
+	 let title = svg.append("g")
+    .attr("class", "title");
+  
+   title.append("text")
+    .attr("x", 1200)
+      .attr("y", 40)
+      .attr("text-anchor", "middle")
+      .style("font", "20px sans-serif")
+      .text("GDP by country");
   
 
 
