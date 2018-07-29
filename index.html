@@ -3,14 +3,31 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    font-size: 18
-    text-decoration: none;
-    color: initial;
-}
+a,
+
+a:visited { color: #93291b; text-decoration: none; }
+
+
+a:hover { text-decoration: underline }
+
+
+h1 { font-family: 'Enriqueta', arial, serif; line-height: 1.25; margin: 0 0 10px; font-size: 40px; font-weight: bold; }
+
+h1 a,
+
+h1 a:visited { color: #333333 }
+
+
+h1 a:hover { color: #93291b; text-decoration: none; }
+
+
+p { color: #333333; font-family: "Helvetica Neue",Arial,sans-serif; font-size: 16px; font-weight: 300; line-height: 1.5625; margin-bottom: 15px; }
+
+
+a.read-more { background-color: #93291b; border: 1px solid #333333; border-radius: 3px 3px 3px 3px; box-shadow: 0 0 1px #93291b inset; color: #f5f5f5; padding: 5px; }
+
+
+a.read-more:hover { background-color: #be3523; border-radius: 3px 3px 3px 3px; text-decoration: none; }
 </style>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
@@ -32,7 +49,7 @@ a.button {
      <a href="BubbleandBar.html" class="Button"  >Next Page</a>
   </div>
 
-  <div class="w3-container w3-white">
+  <div >
     <p>
        1) (Page 1) Bubble Chart and Horizontal Bar chart
 
@@ -48,6 +65,9 @@ a.button {
 
        The second chart is a chart of GDP for these same countries (In Millions).
 
+    </p>    
+<br/>
+<p>
        2) (Page 2 ) Vertical Bar chart filtered by country dropdown list where various filter criteria 
        
        such as GDP QoQ, GDP YoY, Interest rate and Inflation_rate data can be viewed. If we hover on 
