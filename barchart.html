@@ -84,7 +84,7 @@ d3.csv("barchart.csv", function(d){
 
 	var y = d3.scaleLinear()
 			.domain([0, d3.max(data, function(d){
-				return +d[selection]*100;
+				return +d[selection];
 			})])
 			.range([height, 0]);
 
