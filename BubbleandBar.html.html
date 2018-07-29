@@ -45,15 +45,13 @@ var div = d3.select("body").append("div")
 
   
   svg.append("text")
-    .attr("x", 290)   
+    .attr("x", 280)   
     .attr("y", 20 )
     .attr("dy", "3.5em" )
     .attr("text-anchor", "start")  
-    .style("font-size", "22px")  
+    .style("font-size", "28px")  
   	.style("font-weight", "bold")
-    .text("Population by Country (Millions)");
-
-
+    .text("Population by Country (In Millions) ");
 
 var pack = d3.pack()
     .size([width-800, height])
@@ -106,7 +104,7 @@ d3.csv("trading_ds.csv", function(d) {
       .style("top", (d3.event.pageY - 28) + "px");	
   })
     .on("click", function(d) {
-        alert(" Population of country (In Millions)"+d.data.Country+" is " +d.data.Population+" Million ");
+        alert(" Population of country (In Millions)"+d.data.Country+" clicked " +d.data.Population+" is ");
     })			
     .on("mouseout", function(d) {		
     div.transition()		
@@ -205,17 +203,17 @@ d3.csv("trading_ds.csv", function(d) {
 		.style("fill", "#2ca25f");
 	
 
-	
+	//define chart title to svg
+	let title = svg.append("g")
+		.attr("class", "title");
+	title.append("text")
+		.attr("x", 1200)
+			.attr("y", 40)
+			.attr("text-anchor", "middle")
+			.style("font", "20px sans-serif")
+			.text("GDP by country (In Millions)");
 
-	 let title = svg.append("g")
-    .attr("class", "title");
-  
-   title.append("text")
-    .attr("x", 1200)
-      .attr("y", 40)
-      .attr("text-anchor", "middle")
-      .style("font", "20px sans-serif")
-      .text("GDP by country");
+	
   
 
 
