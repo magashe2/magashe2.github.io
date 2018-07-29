@@ -201,7 +201,7 @@ d3.csv("trading_ds.csv", function(d) {
 		.attr("height", y.bandwidth())
 		.attr("width", function(d) { return x(d.GDP); })
 		.style("fill", "#2ca25f");
-	});
+	
 
 	//define chart title to svg
 	let title = svg.append("g")
